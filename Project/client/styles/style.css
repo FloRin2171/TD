@@ -4,7 +4,7 @@ body {
 }
 
 #app {
-  width: 100%;
+  width: 95%;
   margin: 0 auto 0 auto;
 }
 
@@ -24,7 +24,7 @@ body {
 
 .user-row-header {
   padding: 20px 0px 5px 0px;
-  text-align: left;
+  text-align: keft;
   font-weight: bold;
   border-bottom: 2px solid #ffff4a;
 }
