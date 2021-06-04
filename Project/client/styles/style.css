@@ -1,0 +1,66 @@
+body {
+  font-family: 'Apple Chancery', cursive;
+  margin-top: 100px;
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+.user-list {
+  padding: 0px;
+  list-style-type: none;
+
+}
+
+.title {
+  background-color: #ff0000;
+  padding: 15px 15px 5px 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.user-row-header {
+  padding: 20px 0px 5px 0px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ffff4a;
+}
+
+.user-row {
+  border-bottom: 1px solid #0ef0c6;
+  padding: 15px 0px 5px 0px;
+  text-align: left;
+}
+
+.user-row:hover {
+  background-color: #2a1233;
+  cursor: pointer;
+}
+
+.user-name {
+  width: 15%;
+  display: inline-block;
+}
+
+.user-city {
+  width: 15%;
+  display: inline-block;
+}
+
+.delete-btn {
+  width:15%;
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  text-align: center;
+  display: inline-block;
+}
+
+.delete-btn:hover {
+  background-color: brown;
+}

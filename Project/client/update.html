@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+<body>
+<a href="index.html">Home</a>
+<div id="update">
+    Actualizare chitara cu id-ul: {{ id }} <br>
+    Nume: <input type="text" v-model="guitar.nume">
+    Pret: <input type="text" v-model="guitar.pret">
+    Culoare: <input type="text" v-model="guitar.culoare">
+    Numar Taste: <input type="text" v-model="guitar.numarTaste">
+    Descriere: <input type="text" v-model="guitar.descriere">
+    Numar Corzi: <input type="text" v-model="guitar.numarCorzi">
+    Corp: <input type="text" v-model="guitar.corp">
+    Electronica: <input type="text" v-model="guitar.electronica">
+    Model Doze: <input type="text" v-model="guitar.modelDoze">
+    Include Husa: <input type="text" v-model="guitar.includeHusa">
+    Electrica: <input type="text" v-model="guitar.electrica">
+
+    <button v-on:click="update(guitar.id)">Save</button>
+
+    <p>{{message}}</p>
+
+</div>
+
+<script src="src/update.js"></script>
+</body>
+</html>

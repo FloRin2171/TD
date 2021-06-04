@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="utf-8" http-equiv="encoding"/>
+
+    <title>Magazin Chitare</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@3000&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/vue-material.css"/>
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/vue-material.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="src/guitar-service.js"></script>
+</head>
+
+<body>
+<div id="app">
+
+
+    <div class="title">Chitare</div>
+
+    <p style="text-align: center" v-if="guitars.length == 0">No guitars found</p>
+
+    <ul class="user-list" v-if="guitars.length > 0">
+        <li>
+            <div class="user-row-header">
+                <div class="user-name">Nume</div>
+                <div class="user-city">Pret</div>
+                <div class="user-city">Numar Corzi</div>
+                <div class="user-city">Corp</div>
+                <div class="user-city">Culoare</div>
+                <div class="user-city">Options</div>
+                <a class="" :href="'add.html?'">Add guitar</a>
+            </div>
+        </li>
+
+        <li v-for="guitar in guitars">
+            <div class="">
+                <a class="user-city" :href="'details.html?id='+guitar.id">{{ guitar.nume }}</a>
+                <span class="user-city"><i>{{ guitar.pret }}</i></span>
+                <span class="user-city"><i>{{ guitar.numarCorzi }}</i></span>
+                <span class="user-city"><i>{{ guitar.corp}}</i></span>
+                <span class="user-city"><i>{{ guitar.culoare }}</i></span>
+                <button v-on:click="deleteGuitar(guitar.id)">Delete</button>
+                <a :href="'update.html?id='+guitar.id" target="_self">Update</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="src/app.js"></script>
+</body>
+
+</html>
